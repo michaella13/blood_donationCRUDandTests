@@ -7,7 +7,7 @@ const RegisterDonation = () => {
   const [formValues, setFormValues] = useState({ firstName: '',lastName: '',email: '',  blood_type: '', number_of_packets: ''})
   // onSubmit handler
   const onSubmit = donationObject => {
-    axios.post('http://localhost:4000/students/create-student', donationObject)
+    axios.post('http://localhost:4000/donors/create-donor', donationObject)
       .then(res => {
         if (res.status === 200)
           alert('Donor successfully registered')
